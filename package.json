@@ -1,0 +1,21 @@
+{
+    "name": "sample-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "run": "tsc src/index.ts && node src/index.js",
+        "install-npm-packages": "npm install",
+        "___Global install NCU to run the commands below": "https://www.npmjs.com/package/npm-check-updates",
+        "check-npm-packages": "ncu",
+        "update-npm-packages": "ncu -u"
+    },
+    "repository": {
+        "type": "git"
+    },
+    "devDependencies": {
+        "eslint": "^7.32.0",
+        "prettier": "2.3.2",
+        "typescript": "^4.3.5"
+    }
+}
