@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "run": "tsc src/index.ts && node src/index.js",
-        "install-npm-packages": "npm install",
+        "✔️ run": "tsc src/index.ts && node src/index.js",
+        "⬇️ install-npm-packages": "npm install",
         "___Global install NCU to run the commands below": "https://www.npmjs.com/package/npm-check-updates",
         "check-npm-packages": "ncu",
         "update-npm-packages": "ncu -u"
