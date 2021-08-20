@@ -86,7 +86,7 @@ var bar = 'bar1';
 var o2 = { bar: 'bar2', foo: foo };
 var o3 = { bar: 'bar3' };
 
-foo();
+// foo();
 o2.foo();
 
 //***************** */
@@ -98,7 +98,39 @@ function foo2() {
 var bar2 = 'bar22';
 var object = { bar2: 'barObject2' };
 
-foo2(); //undefined because strict mode
+// foo2(); //undefined because strict mode
 foo2.call(object); // barObjcet2
 
-//******** closure */
+console.log('/******** closure */');
+
+function foo3() {
+    var bar = 'bar3';
+
+    function baz() {
+        console.log(bar);
+    }
+    bam(baz);
+}
+
+function bam(baz) {
+    baz();
+}
+
+// foo3();
+
+// ***** loops
+
+// prints 5 everytime
+// for (var i = 1; i < 5; i++) {
+//     setTimeout(function () {
+//         console.log(i);
+//     }, i * 100);
+// }
+
+for (let i = 1; i < 5; i++) {
+    setTimeout(function () {
+        console.log(i);
+    }, i * 100);
+}
+
+export {};

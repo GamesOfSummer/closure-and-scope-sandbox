@@ -1,5 +1,7 @@
+"use strict";
 // let rotLeft = (arraySize: number, timesToRotate: number, array: Number[]) => {
 //     let pair = 0;
+exports.__esModule = true;
 //     for (let i = 0; i < timesToRotate; i++) {
 //         const newEndValue = array.shift();
 //         if (newEndValue) {
@@ -66,7 +68,7 @@ function foo() {
 var bar = 'bar1';
 var o2 = { bar: 'bar2', foo: foo };
 var o3 = { bar: 'bar3' };
-foo();
+// foo();
 o2.foo();
 //***************** */
 // hard binding with call binding
@@ -75,5 +77,32 @@ function foo2() {
 }
 var bar2 = 'bar22';
 var object = { bar2: 'barObject2' };
-foo2();
-foo2.call(object);
+// foo2(); //undefined because strict mode
+foo2.call(object); // barObjcet2
+console.log('/******** closure */');
+function foo3() {
+    var bar = 'bar3';
+    function baz() {
+        console.log(bar);
+    }
+    bam(baz);
+}
+function bam(baz) {
+    baz();
+}
+var _loop_1 = function (i) {
+    setTimeout(function () {
+        console.log(i);
+    }, i * 100);
+};
+// foo3();
+// ***** loops
+// prints 5 everytime
+// for (var i = 1; i < 5; i++) {
+//     setTimeout(function () {
+//         console.log(i);
+//     }, i * 100);
+// }
+for (var i = 1; i < 5; i++) {
+    _loop_1(i);
+}
